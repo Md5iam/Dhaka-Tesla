@@ -19,7 +19,7 @@ Step-by-step instructions to deploy the Dhaka Tesla Pool full-stack project to *
    - **Database Name**: `defaultdb`
 7. Form your Spring Boot JDBC URL:
    ```text
-   jdbc:mysql://<HOST>:<PORT>/defaultdb?sslMode=REQUIRED&allowPublicKeyRetrieval=true
+   jdbc:mysql://<HOST>:<PORT>/defaultdb?useSSL=false&allowPublicKeyRetrieval=true
    ```
 
 ---
@@ -36,7 +36,7 @@ Step-by-step instructions to deploy the Dhaka Tesla Pool full-stack project to *
    - **Runtime**: **Docker** (Render will automatically detect `Dockerfile` at root)
    - **Instance Type**: **Free**
 5. Scroll down to **Environment Variables** and add:
-   - `SPRING_DATASOURCE_URL`: `jdbc:mysql://<HOST>:<PORT>/defaultdb?sslMode=REQUIRED&allowPublicKeyRetrieval=true`
+   - `SPRING_DATASOURCE_URL`: `jdbc:mysql://<HOST>:<PORT>/defaultdb?useSSL=false&allowPublicKeyRetrieval=true`
    - `SPRING_DATASOURCE_USERNAME`: `avnadmin`
    - `SPRING_DATASOURCE_PASSWORD`: `<YOUR_AIVEN_PASSWORD>`
 6. Click **Create Web Service**.
